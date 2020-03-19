@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Mr-drunk-reservations</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="phone">
+  <div id="logo-box">
+    <img id="logo" src="https://firebasestorage.googleapis.com/v0/b/mr-drunk-backend.appspot.com/o/Black%20logo.svg?alt=media&token=8f98022c-5ad6-436c-9ac0-c5e597d149cb">
+  </div>
+  <div id="reservations" class="collection"></div>
+  <form id="reservation-form">
+    <div class="field">
+      <label class="customer-name" for="customer-name">訂位姓名</label>
+      <input type="text" id="customer-name" name="CustomerName">
+      <div class="error" id="customer-name-error"></div>
+    </div>
+    <div class="field">
+      <label class="customer-amount" for="customer-amount">訂位人數</label>
+      <input type="number"  id="customer-amount" name="CustomerAmount">
+      <div class="error" id="customer-amount-error"></div>
+    </div>
+    <div class="field">
+      <label for"customer-date">訂位日期</label>
+      <input type="date" id="customer-date" name="DateTime">
+      <div class="error" id="customer-date-error"></div>
+    </div>
+    <div class="field">
+      <label>桌型</label>
+      <br>
+      <label class="radio-input">
+        <input class="with-gap" name="TableType" value="small" type="radio" checked />
+        <span>小桌</span>
+      </label>
+      <label class="radio-input">
+        <input class="with-gap" name="TableType" value="big" type="radio" />
+        <span>大桌</span>
+      </label>
+    </div>
+    <input class="waves-effect waves-light btn" id="submit-btn" type="submit" value="送出">
+
+  </form>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/react/16.13.0/umd/react.production.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.13.0/umd/react-dom.production.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
