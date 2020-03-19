@@ -31,7 +31,7 @@ class Reservations extends React.PureComponent {
     this.props.results.forEach(result => {
       const id = result[0];
       const res = result[1];
-      if (!res.Deleted && Date.parse(res.DateTime) >= Date.now()) lists.push(React.createElement(Reservation, { res: res, id: id }));
+      if (!res.Deleted && Date.parse(res.DateTime) >= Date.now() - 86400000) lists.push(React.createElement(Reservation, { res: res, id: id }));
     });
     return (
       lists);
@@ -99,7 +99,7 @@ const validate = formData => {
     $('#customer-date').addClass('error-input');
     validData = false;
   }
-  if (res <= Date.now()) {
+  if (res <= Date.now() - 86400000) {
     $('#customer-date-error').text('你回到過去？');
     $('#customer-date').addClass('error-input');
     validData = false;
